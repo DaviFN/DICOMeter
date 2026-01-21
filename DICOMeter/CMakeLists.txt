@@ -1,0 +1,24 @@
+set(EXECUTABLE_MODULE_NAME "DICOMeter")
+
+cmake_minimum_required(VERSION 3.24)
+
+FILE(GLOB SOURCES *.cpp)
+
+add_executable(${EXECUTABLE_MODULE_NAME} ${SOURCES})
+
+target_link_libraries(
+    ${EXECUTABLE_MODULE_NAME}
+    Qt5::Widgets
+    DCMTK::DCMTK
+)
+
+target_include_directories(
+    ${EXECUTABLE_MODULE_NAME}
+    PUBLIC
+    "common"
+    ${DCMTK_INCLUDE_DIRS}
+)
+
+install(TARGETS ${EXECUTABLE_MODULE_NAME} DESTINATION "${INSTALLATION_DIRECTORY}")
+
+set_target_properties(${EXECUTABLE_MODULE_NAME} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY ${INSTALLATION_DIRECTORY})

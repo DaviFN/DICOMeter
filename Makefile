@@ -1,0 +1,43 @@
+CXX = "g++"
+
+CC = "gcc"
+
+.PHONY: clean gen
+
+RM = del
+
+RMDIR = rd /q /s
+
+MSG = echo
+
+PROJECT_NAME = DICOMeter
+
+PROGRAM_NAME = $(PROJECT_NAME).exe
+
+BINARY_DIR_PATH = bin
+
+BUILDFILES_DIR_PATH = buildfiles
+
+DEBUG_BUILD_PATH = $(BUILDFILES_DIR_PATH)/debug
+
+SOLUTION_FILEPATH = $(BUILDFILES_DIR_PATH)/debug/$(PROJECT_NAME).sln
+
+PROGRAM_PATH = $(BINARY_DIR_PATH)/debug
+
+PROGRAM_FILEPATH = $(PROGRAM_PATH)/$(PROGRAM_NAME)
+
+RELEASE_PROGRAM_PATH = $(BINARY_DIR_PATH)/release
+
+RELEASE_PROGRAM_FILEPATH = $(RELEASE_PROGRAM_PATH)/$(PROGRAM_NAME)
+
+gen:
+	@python build.py
+
+open:
+	cd $(DEBUG_BUILD_PATH) && devenv $(PROJECT_NAME).sln
+	
+clean:
+	@$(MSG) cleaning...
+	@if exist $(BINARY_DIR_PATH) $(RMDIR) $(BINARY_DIR_PATH)
+	@if exist $(BUILDFILES_DIR_PATH) $(RMDIR) $(BUILDFILES_DIR_PATH)
+	@$(MSG) cleaned
