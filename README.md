@@ -21,7 +21,8 @@ Some sample files known to work are provided within the "sample-dicom-files" dir
    - Make
 
 2. **Install vcpkg and the required vcpkg packages**
-   *Travailleur uses vcpkg, a C++ package manager, to manage some of its requirements; make sure to follow the following steps to install vcpkg in your machine and acquire the required packages:*
+
+   *DICOMeter uses vcpkg, a C++ package manager, to manage some of its requirements; make sure to follow the following steps to install vcpkg in your machine and acquire the required packages:*
    1. Navigate to a folder where vcpkg is to be installed; as a suggestion, "C:\devtools"
    2. Clone the vcpkg repository on GitHub and cd onto it:  
       ```bash
@@ -43,7 +44,7 @@ Some sample files known to work are provided within the "sample-dicom-files" dir
       vcpkg install qt5-base:x64-windows dcmtk:x64-windows
       ```
 
-3. **Clone and Build DICOMeter** 
+4. **Clone and Build DICOMeter** 
    *At this point, we have everything we need to clone and build Travailleur*
    1. Clone Travailleur's repository somewhere and cd onto it:
       ```bash
@@ -62,7 +63,7 @@ Some sample files known to work are provided within the "sample-dicom-files" dir
    4. Open the solution explorer window, if not open already (CTRL + ALT + L hotkey)
    5. Right-click the "INSTALL" project and select "build"; wait until the build process completes
    
-4. **Run the Application**   
+5. **Run the Application**   
    1. Set the DICOMeter target to be the startup one by right-clicking it and selecting "set as startup project"
    2. Launch the app through the Local Windows Debugger (or directly via the generated executable file)
 
