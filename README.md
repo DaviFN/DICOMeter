@@ -45,8 +45,8 @@ Some sample files known to work are provided within the "sample-dicom-files" dir
       ```
 
 4. **Clone and Build DICOMeter** 
-   *At this point, we have everything we need to clone and build Travailleur*
-   1. Clone Travailleur's repository somewhere and cd onto it:
+   *At this point, we have everything we need to clone and build DICOMeter*
+   1. Clone DICOMeter's repository somewhere and cd onto it:
       ```bash
       git clone https://github.com/DaviFN/DICOMeter && cd DICOMeter
       ```
