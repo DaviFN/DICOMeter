@@ -2,7 +2,7 @@
 DICOMeter is a simple application to read DICOM (Digital Imaging and Communications in Medicine) files. It can be used as a template for working with such files using the Qt and the DCMTK libraries on x64 Windows.
 
 # Features
-At this point in time DICOMeter limits itself to opening a DICOM file and presenting its associate image and the "patient name" field from the file's metadata.
+At this point in time DICOMeter limits itself to opening a DICOM file and presenting its associated image and the "patient name" field from the file's metadata.
 
 # Limitations
 This is very, very far from being a thoroughly tested way of handling DICOM files; there are many DICOM files not handled well by this application. It can however be used as a starting point for using DCMTK.
